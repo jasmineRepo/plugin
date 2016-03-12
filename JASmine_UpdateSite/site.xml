@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/JASmine_Feature_3.1.5.3.jar" id="JASmine_Feature" version="3.1.5.3">
+      <category name="JASmineUS"/>
+   </feature>
+   <category-def name="JASmineUS" label="JAS-mine">
+      <description>
+         JAS-mine simulation project plugin for Eclipse IDE
+      </description>
+   </category-def>
+</site>
