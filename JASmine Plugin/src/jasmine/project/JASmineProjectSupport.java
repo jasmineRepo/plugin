@@ -130,8 +130,8 @@ public class JASmineProjectSupport {
     private static IFolder addFolderStructureToProject(IProject project, IJavaProject javaProject) throws CoreException {
     	
     	String[] folders = {
-    			"src/main/resources/META-INF",		//For persistence.xml to be stored here
-    			"src/main/java/META-INF",			//Also store another copy of persistence.xml here to allow the .jar export to have database functionality (bit of a hack)
+//    			"src/main/resources/META-INF",		//Under Maven conventions, persistence.xml should be stored here
+    			"src/main/java/META-INF",			//Store persistence.xml here to allow the .jar export to have database functionality
     			"input",
 //    			"libs",
 //    			"output",
@@ -323,22 +323,22 @@ public class JASmineProjectSupport {
     	
 		//Create XML file in project directory
     	
-    	//This allows the project to have database functionality when running in Eclipse
-    	//This is where the persistence.xml should be, under Maven conventions.
-		IFile persFile = project.getFile("src/main/resources/META-INF/persistence.xml");
+//    	//This allows the project to have database functionality when running in Eclipse
+//    	//This is where the persistence.xml should be, under Maven conventions.
+//		IFile persFile = project.getFile("src/main/resources/META-INF/persistence.xml");
 		
-		//This allows the project to have database functionality after exported to a .jar (bit of a hack)
+		//This allows the project to have database functionality after exported to a .jar.
 		//The problem is that the persistence.xml in the /src/main/resources/ directory gets exported to 
 		// the /resources/META-INF/ directory in the .jar, not the /META-INF/ directory, which is the 
 		// required location for the database functionality to work.  We can achieve this, if we stored 
 		// this extra copy of the persistence.xml file in the /src/main/java/ directory, hence we create
-		// the extra copy of the persistence.xml file below:
+		// the persistence.xml file below:
 		IFile persFileJAR = project.getFile("src/main/java/META-INF/persistence.xml");
 		
-		InputStream inputStream = new ByteArrayInputStream(PersistenceCode.persistenceStringData().getBytes(StandardCharsets.UTF_8));
+//		InputStream inputStream = new ByteArrayInputStream(PersistenceCode.persistenceStringData().getBytes(StandardCharsets.UTF_8));
 		InputStream inputStreamJAR = new ByteArrayInputStream(PersistenceCode.persistenceStringData().getBytes(StandardCharsets.UTF_8));
 		try {
-			persFile.create(inputStream, false, null);
+//			persFile.create(inputStream, false, null);
 			persFileJAR.create(inputStreamJAR, false, null);
 		} catch (CoreException e) {
 			// TODO Auto-generated catch block
