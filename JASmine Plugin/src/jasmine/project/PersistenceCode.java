@@ -21,7 +21,7 @@ public class PersistenceCode {
 				+ "\t</persistence-unit>\n"
 				+ "\n"
 				+ "\t<persistence-unit name=\"sim-model-out\">\n"
-				+ "\t\t<properties>"
+				+ "\t\t<properties>\n"
 				+ "\t\t\t<property name=\"hibernate.connection.driver_class\" value=\"org.h2.Driver\" />\n"
 				+ "\t\t\t<property name=\"hibernate.connection.username\" value=\"sa\" />\n"
 				+ "\t\t\t<property name=\"hibernate.connection.password\" value=\"\" />\n"
