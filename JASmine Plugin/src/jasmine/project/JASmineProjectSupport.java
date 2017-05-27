@@ -204,7 +204,7 @@ public class JASmineProjectSupport {
 					classSourceBody = ClassSourceCode.collectorBody(modelName);
 				} 
 				else if(classExt.equals("Observer")) {
-					classSourceHeader = ClassSourceCode.observerHeader();
+					classSourceHeader = ClassSourceCode.observerHeader(packageName, modelName);
 					classSourceSignature = ClassSourceCode.observerSignature(modelName);
 					classSourceBody = ClassSourceCode.observerBody(modelName);
 				} 
