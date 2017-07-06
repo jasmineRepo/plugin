@@ -6,7 +6,7 @@ public class PomCode {
 		
 		//TODO: Update the version numbers here whenever you deploy a new version of the Eclipse Plugin
 		String versionCore = "3.2.1";
-		String versionGUI = "3.2.1";
+		String versionGUI = "3.2.1.1";
 		
 		return "<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n"
 				+ "\t<modelVersion>4.0.0</modelVersion>\n"
