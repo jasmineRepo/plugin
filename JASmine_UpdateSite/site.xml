@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/JASmine_Feature_4.0.5.jar" id="JASmine_Feature" version="4.0.5">
+   <feature url="features/JASmine_Feature_4.0.5.1.jar" id="JASmine_Feature" version="4.0.5.1">
       <category name="JASmineUS"/>
    </feature>
    <category-def name="JASmineUS" label="JAS-mine">

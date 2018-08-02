@@ -2,18 +2,18 @@
 <feature
       id="JASmine_Feature"
       label="JAS-mine_Plugin"
-      version="4.0.5">
+      version="4.0.5.1">
 
    <description url="http://www.example.com/description">
       JAS-mine simulation project plugin for Eclipse IDE
    </description>
 
    <copyright url="http://www.example.com/copyright">
-      Copyright 2017 Ross Richardson
+      Copyright 2018 Ross Richardson
    </copyright>
 
    <license url="http://www.example.com/license">
-      Copyright (C) 2017 Ross E. Richardson
+      Copyright (C) 2018 Ross E. Richardson
 
 This library is free software; you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free
@@ -34,7 +34,7 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
          id="JASmine_Plugin"
          download-size="25"
          install-size="0"
-         version="4.0.5"
+         version="4.0.5.1"
          unpack="false"/>
 
 </feature>
