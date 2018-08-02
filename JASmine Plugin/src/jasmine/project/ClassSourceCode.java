@@ -78,7 +78,7 @@ public class ClassSourceCode {
 				+ "\n"
 				+ "\t\t\tcollectorEvents.addEvent(this, Processes.DumpInfo);\n"
 				+ "\n"
-				+ "\t\t\tgetEngine().getgetEventQueue().scheduleRepeat(collectorEvents, timeOfFirstSnapshot, Order.AFTER_ALL.getOrdering()-1, timestepsBetweenSnapshots);\n"
+				+ "\t\t\tgetEngine().getEventQueue().scheduleRepeat(collectorEvents, timeOfFirstSnapshot, Order.AFTER_ALL.getOrdering()-1, timestepsBetweenSnapshots);\n"
 				+ "\n"
 				+ "\t\tlog.debug(\"Collector schedule created\");"
 				+ "\n"
