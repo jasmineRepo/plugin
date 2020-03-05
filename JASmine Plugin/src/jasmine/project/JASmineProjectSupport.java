@@ -325,7 +325,14 @@ public class JASmineProjectSupport {
     	
 //    	//This allows the project to have database functionality when running in Eclipse
 //    	//This is where the persistence.xml should be, under Maven conventions.
-//		IFile persFile = project.getFile("src/main/resources/META-INF/persistence.xml");
+	    	// ROSS: March 2020 - Uncommenting the line below to reinstate a second copy of the persistence.xml file in the project.  
+	    	// This is because it has been found that using a different IDE to Eclipse, in particular IntelliJ, cannot build the project 
+    		// as it cannot find the persistence.xml file unlike Eclipse (I think this is because Eclipse doesn't necessarily use the normal
+    		// build conventions of Maven, whereas IntelliJ might...).  Thus one encounters a Null Pointer Exception regarding the 
+    		// Entity Manager / use of the database.  Hopefully, by reinstating this additional copy (i.e. having it in two locations,
+    		// one to make the project work in IntelliJ / Maven and the other to export the project to a .jar) there will be no further
+    		// problems and hopefully no conflicts because of having a copy of the same file in two different places in the project...
+		IFile persFile = project.getFile("src/main/resources/META-INF/persistence.xml");
 		
 		//This allows the project to have database functionality after exported to a .jar.
 		//The problem is that the persistence.xml in the /src/main/resources/ directory gets exported to 
@@ -335,10 +342,10 @@ public class JASmineProjectSupport {
 		// the persistence.xml file below:
 		IFile persFileJAR = project.getFile("src/main/java/META-INF/persistence.xml");
 		
-//		InputStream inputStream = new ByteArrayInputStream(PersistenceCode.persistenceStringData().getBytes(StandardCharsets.UTF_8));
+		InputStream inputStream = new ByteArrayInputStream(PersistenceCode.persistenceStringData().getBytes(StandardCharsets.UTF_8));
 		InputStream inputStreamJAR = new ByteArrayInputStream(PersistenceCode.persistenceStringData().getBytes(StandardCharsets.UTF_8));
 		try {
-//			persFile.create(inputStream, false, null);
+			persFile.create(inputStream, false, null);
 			persFileJAR.create(inputStreamJAR, false, null);
 		} catch (CoreException e) {
 			// TODO Auto-generated catch block
