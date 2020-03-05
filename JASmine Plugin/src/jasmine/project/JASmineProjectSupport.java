@@ -130,7 +130,7 @@ public class JASmineProjectSupport {
     private static IFolder addFolderStructureToProject(IProject project, IJavaProject javaProject) throws CoreException {
     	
     	String[] folders = {
-//    			"src/main/resources/META-INF",		//Under Maven conventions, persistence.xml should be stored here
+    			"src/main/resources/META-INF",		//Under Maven conventions, persistence.xml should be stored here (ROSS: March 2020 - this is needed to build projects in non-Eclipse IDEs such as IntelliJ, so is uncommented so that we store two copies of persistence.xml in two different places in the project.  See addPersistenceFile() method for more info.)
     			"src/main/java/META-INF",			//Store persistence.xml here to allow the .jar export to have database functionality
     			"input",
 //    			"libs",
